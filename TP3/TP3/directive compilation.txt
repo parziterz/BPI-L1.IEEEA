@@ -1,0 +1,4 @@
+gcc -std=c2x -Wall -Wconversion -Werror -Wextra -Wfatal-errors -Wpedantic -Wwrite-strings -O2 -c timeio.c
+gcc -std=c2x -Wall -Wconversion -Werror -Wextra -Wfatal-errors -Wpedantic -Wwrite-strings -O2 -c test_timeio.c
+gcc -o test_timeio test_timeio.o timeio.o 
+
