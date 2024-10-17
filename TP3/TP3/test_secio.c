@@ -1,4 +1,4 @@
-/* sec_to_time
+/* time_to_sec
  * 4 Septembre 2024
  * Équipe pédagogique BPI
  * Lit sur l'entrée standard un nombre de seconde
@@ -16,16 +16,9 @@
 
 /* Fonction principale */
 int main(void) {
-  int h;
-  int m;
-  int s;
-  int seconds;
+  int h, m, s;
 
-  if (scanf("%d", &seconds) != 1 || d < 0)
-    return EXIT_FAILURE;
-  to_time(seconds, &h, &m, &s);
-  printf("%02d:%02d:%02d\n", h, m, s);
-  ad_1s(&h, &m, &s);
-  printf("%02d:%02d:%02d\n", h, m, s);
+  assert(scanf("%d:%d:%d", &h, &m, &s) == 3); 
+  printf("%d second(s)\n", to_sec(h, m, s));
   return EXIT_SUCCESS;
 }
